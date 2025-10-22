@@ -31,9 +31,11 @@ pip install -r requirements.txt
 
 # Activate environment
 conda activate Enhance_INR_with_TL
+```
 
-
-## Example Usage
+## 🧰 Example Usage
 # Run SIREN experiment on Chest_CT dataset (256×256 resolution)
+```bash
 bash scripts/run_siren.sh --dset Chest_CT --sidelen 256
+```
 
