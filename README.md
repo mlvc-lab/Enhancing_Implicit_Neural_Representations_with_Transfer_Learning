@@ -39,3 +39,6 @@ conda activate Enhance_INR_with_TL
 bash scripts/run_siren.sh --dset Chest_CT --sidelen 256
 ```
 
+
+## Acknowledgement
+This work was supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government(MSIT) (No.RS-2022-00155911, Artificial Intelligence Convergence Innovation Human Resources Development (Kyung Hee University))
