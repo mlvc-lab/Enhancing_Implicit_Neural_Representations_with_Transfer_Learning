@@ -34,8 +34,8 @@ conda activate Enhance_INR_with_TL
 ```
 
 ## 🧰 Example Usage
-# Run SIREN experiment on Chest_CT dataset (256×256 resolution)
 ```bash
+# Run SIREN experiment on Chest_CT dataset (256×256 resolution)
 bash scripts/run_siren.sh --dset Chest_CT --sidelen 256
 ```
 
