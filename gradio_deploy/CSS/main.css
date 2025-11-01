@@ -1,0 +1,95 @@
+/* 전체 폭을 화면 가로 전체로 확장 */
+.gradio-container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 입력/출력 갤러리 높이 지정 */
+#input_gallery, #output_gallery {
+  height: 50vh !important;
+}
+
+/* 출력 이미지는 비율 유지 */
+#output_gallery img {
+  object-fit: contain !important;
+}
+
+/* 하단 푸터 제거 */
+footer {
+  display: none !important;
+}
+
+/* Row/Column 간 여백 최소화 */
+.grid {
+  gap: 8px !important;
+}
+
+/* Textbox placeholder를 갤러리 높이(360px)에 맞게 확장 */
+#tb_scratch, #tb_ours {
+  height: 360px !important;       /* ← 갤러리와 동일 높이 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 내부 textarea를 전체 채우기 (라벨 제외) */
+#tb_scratch textarea,
+#tb_ours textarea {
+  flex: 1;
+  height: calc(100% - 24px);      /* label 높이 감안 (필요 시 조절) */
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  resize: none;
+}
+
+
+/* 오른쪽 컬럼은 자동 높이, 출력 행만 갤러리와 동일 높이(여기선 360px) */
+#right_col { 
+  display: flex;
+  flex-direction: column;
+}
+
+/* 출력 박스를 딱 갤러리 높이로 */
+#output_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  height: 360px;                 /* ← 왼쪽 갤러리 높이와 동일(=in_gallery.height) */
+}
+
+/* 그리드 셀(각 컴포넌트 래퍼)은 전체 높이를 차지 */
+#output_row > div { 
+  height: 100%;
+}
+
+/* 실제 그리디오 이미지 래퍼도 꽉 채우기 (버전별 클래스 대응) */
+#output_scratch, #output_ours,
+#output_row .gradio-image, 
+#output_row .gr-image { 
+  height: 100%;
+}
+
+/* 이미지 자체는 비율 유지하며 최대 확대 */
+#output_scratch img,
+#output_ours img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+
+#block_title, #block_inr_desc, #block_contrib, #block_demo {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+
+#block_inr_desc, #block_contrib {
+  background-color: #fafafa;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
